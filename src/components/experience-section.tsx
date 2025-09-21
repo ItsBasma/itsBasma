@@ -1,13 +1,13 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
-import cstLogo from "@assets/image_1757789463245.png";
-import stcLogo from "@assets/image_1757789802813.png";
-import omnifiaLogo from "@assets/image_1757790001356.png";
-import thiqahLogo from "@assets/image_1757790054039.png";
-import topLogo from "@assets/image_1757790258976.png";
-import tawadLogo from "@assets/image_1757791259636.png";
-import tetecLogo from "@assets/image_1757792730016.png";
+import cstLogo from "@/assets/image_1757789463245.png";
+import stcLogo from "@/assets/image_1757789802813.png";
+import omnifiaLogo from "@/assets/image_1757790001356.png";
+import thiqahLogo from "@/assets/image_1757790054039.png";
+import topLogo from "@/assets/image_1757790258976.png";
+import tawadLogo from "@/assets/image_1757791259636.png";
+import tetecLogo from "@/assets/image_1757792730016.png";
 
 export default function ExperienceSection() {
   const experiences = [
