@@ -1,10 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import facialExpressionImage from "@assets/facial_expression_compressed.png";
-import twitterSentimentImage from "@assets/stock_images/sentiment_analysis_v_63c83247.jpg";
-import employeeAttritionImage from "@assets/stock_images/employee_attrition_p_a59be08d.jpg";
-import heartDiseaseImage from "@assets/heart_disease_compressed.png";
-import regulatoryDocImage from "@assets/regulatory_processing_compressed.png";
+import facialExpressionImage from "@/assets/facial_expression_compressed.png";
+import twitterSentimentImage from "@/assets/sentiment_analysis_v_63c83247.jpg";
+import employeeAttritionImage from "@/assets/employee_attrition_p_a59be08d.jpg";
+import heartDiseaseImage from "@/assets/heart_disease_compressed.png";
+import regulatoryDocImage from "@/assets/regulatory_processing_compressed.png";
 
 export default function ProjectsSection() {
   const projects = [
