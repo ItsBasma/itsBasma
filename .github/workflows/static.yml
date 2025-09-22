@@ -35,8 +35,12 @@ jobs:
       - name: Build
         run: npm run build
         
-      - name: List build output
-        run: ls -la dist/
+      - name: List dist contents
+        run: |
+          echo "Contents of dist directory:"
+          ls -la dist/
+          echo "Contents of dist/assets directory:"
+          ls -la dist/assets/ || echo "No assets directory found"
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -44,7 +48,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: 'dist'
           
       - name: Deploy to GitHub Pages
         id: deployment
