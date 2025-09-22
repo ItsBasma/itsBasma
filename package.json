@@ -5,7 +5,7 @@
   "homepage": "https://ItsBasma.github.io/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/itsBasma/"',
+    "build": "vite build --base=/itsBasma/",
     "preview": "vite preview"
   },
   "dependencies": {
