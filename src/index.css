@@ -4,19 +4,24 @@
 @tailwind utilities;
 
 :root {
-  /* Portfolio specific colors */
-  --portfolio-primary: #003d7a;
-  --portfolio-secondary: #1d4ed8;
-  --portfolio-accent: #2563eb;
-  --portfolio-neutral: #64748b;
-  --portfolio-bg-light: #f8fafc;
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(210 25% 7.8431%);
+  --primary: hsl(213.1 93.9% 67.8%);
+  --secondary: hsl(217 91.2% 59.8%);
+  --accent: hsl(214.3 83.2% 70.6%);
+  --border: hsl(201.4286 30.4348% 90.9804%);
+  --portfolio-primary: hsl(210 100% 30%);
+  --portfolio-secondary: hsl(215 85% 45%);
+  --portfolio-accent: hsl(205 95% 55%);
+  --portfolio-neutral: hsl(215 35% 35%);
+  --portfolio-bg-light: hsl(210 45% 97%);
 }
 
 @layer base {
   body {
     font-family: 'Inter', sans-serif;
-    background-color: white;
-    color: #1f2937;
+    background-color: var(--background);
+    color: var(--foreground);
   }
 
   html {
@@ -54,14 +59,10 @@
   }
   
   .bg-portfolio-accent {
-    background-color: var(--portfolio-accent);
+    color: var(--portfolio-accent);
   }
   
   .bg-portfolio-gradient {
     background: linear-gradient(135deg, var(--portfolio-primary), var(--portfolio-secondary));
-  }
-  
-  .shadow-portfolio {
-    box-shadow: 0 10px 25px -5px rgba(0, 61, 122, 0.15), 0 4px 10px -2px rgba(0, 61, 122, 0.15);
   }
 }
