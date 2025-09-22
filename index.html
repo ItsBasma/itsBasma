@@ -1,16 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Code:wght@300..700&family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
-    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basmah Alnasair - Senior Customer Journey Development Specialist</title>
+    <meta name="description" content="Senior Customer Journey Development Specialist with 5+ years of experience in data analytics, customer experience, and digital transformation.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #003d7a;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #003d7a;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .hero .highlight {
+            color: #003d7a;
+        }
+        
+        .hero h2 {
+            font-size: 1.5rem;
+            color: #64748b;
+            margin-bottom: 2rem;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: #4b5563;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: #003d7a;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            border: 2px solid #003d7a;
+            color: #003d7a;
+            background: transparent;
+        }
+        
+        .btn-outline:hover {
+            background: #003d7a;
+            color: white;
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1f2937;
+        }
+        
+        .bg-gray {
+            background: #f8fafc;
+        }
+        
+        /* Experience */
+        .experience-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            border-left: 5px solid #003d7a;
+        }
+        
+        .experience-item h3 {
+            color: #003d7a;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-item .company {
+            color: #64748b;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-item .period {
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .achievements {
+            list-style: none;
+        }
+        
+        .achievements li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .achievements li:before {
+            content: "✓";
+            color: #003d7a;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .skill-card h3 {
+            color: #003d7a;
+            margin-bottom: 1rem;
+        }
+        
+        /* Contact */
+        .contact-info {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .contact-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-item h4 {
+            color: #003d7a;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-item a {
+            color: #64748b;
+            text-decoration: none;
+        }
+        
+        .contact-item a:hover {
+            color: #003d7a;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Basmah Alnasair</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Hi, I'm <span class="highlight">Basmah Alnasair</span></h1>
+            <h2>Senior Customer Journey Development Specialist</h2>
+            <p>Senior Customer Journey Development Specialist with <strong>5+ years of experience</strong> in data analytics, customer experience, and digital transformation across government and telecom sectors. Skilled in machine learning (ML), natural language processing (NLP), and advanced analytics to drive data-informed decision-making and design citizen-centric digital services aligned with Saudi Vision 2030.</p>
+            <div class="cta-buttons">
+                <a href="https://1drv.ms/b/c/409f90cc056cf158/EZcgXSSGU1NPuKj3BV09x8gBZj8F1Wx7rEccbZzKRtvOJw?e=vcDsog" class="btn btn-primary" target="_blank">Download CV</a>
+                <a href="https://www.linkedin.com/in/basmah-alnasair" class="btn btn-outline" target="_blank">LinkedIn Profile</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="bg-gray">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="experience-item">
+                <h3>Senior Customer Journey Development Specialist</h3>
+                <div class="company">Communications, Space & Technology Commission (CST)</div>
+                <div class="period">May 2025 - Present</div>
+                <ul class="achievements">
+                    <li>Led customer journey enhancements for telecom projects, including the CST Digital Channels Mutasil initiative</li>
+                    <li>Achieved 85% customer satisfaction rating for government telecom services during Hajj 2025</li>
+                    <li>Developed Python-based tool to streamline regulatory document processing</li>
+                    <li>Led regulatory study on child online protection best practices aligned with Vision 2030</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3>Business Experience Specialist</h3>
+                <div class="company">Communications, Space & Technology Commission (CST)</div>
+                <div class="period">Jan 2023 - Apr 2025</div>
+                <ul class="achievements">
+                    <li>Utilized qualitative and quantitative data analytics to identify pain points</li>
+                    <li>Designed end-to-end customer journeys aligned with Saudi Vision 2030</li>
+                    <li>Applied advanced statistical analysis and data mining techniques</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Digital Services Development</h3>
+                    <p>Customer journey mapping, digital transformation, service innovation</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Data Analytics & Modeling</h3>
+                    <p>Predictive modeling, statistical analysis, performance measurement</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Machine Learning & NLP</h3>
+                    <p>Supervised/unsupervised models, text mining, deep learning</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Programming & Tools</h3>
+                    <p>Python, R, SQL, Tableau, Power BI, Advanced Excel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h4>Email</h4>
+                    <a href="mailto:BasmaOkla@outlook.com">BasmaOkla@outlook.com</a>
+                </div>
+                <div class="contact-item">
+                    <h4>Phone</h4>
+                    <a href="tel:+966507507582">+966 507 507 582</a>
+                </div>
+                <div class="contact-item">
+                    <h4>Location</h4>
+                    <p>Riyadh, Saudi Arabia</p>
+                </div>
+                <div class="contact-item">
+                    <h4>LinkedIn</h4>
+                    <a href="https://www.linkedin.com/in/basmah-alnasair" target="_blank">Connect professionally</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
 </html>
