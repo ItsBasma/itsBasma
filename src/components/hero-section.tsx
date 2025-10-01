@@ -2,9 +2,15 @@ import { Download, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
-  const handleDownloadCV = () => {
-    window.open("https://1drv.ms/b/c/409f90cc056cf158/EZcgXSSGU1NPuKj3BV09x8gBZj8F1Wx7rEccbZzKRtvOJw?e=vcDsog", "_blank");
+    const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/itsBasma/cv.pdf';
+    link.download = 'Basmah_Alnasair_CV.pdf';
+    link.click();
   };
+ // const handleDownloadCV = () => {
+ //   window.open("https://1drv.ms/b/c/409f90cc056cf158/EZcgXSSGU1NPuKj3BV09x8gBZj8F1Wx7rEccbZzKRtvOJw?e=vcDsog", "_blank");
+ // };
 
   const openLinkedIn = () => {
     window.open("https://www.linkedin.com/in/basmah-alnasair", "_blank");
